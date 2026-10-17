@@ -1077,7 +1077,11 @@ jobs:
     # when some jobs failed - the counts carry the bad news. Non-fatal by
     # design: a Telegram outage must never fail a build.
     name: Telegram Announce
-    if: ${{ !cancelled() && (github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && vars.ENABLE_SCHEDULED_BUILDS == 'true')) }}
+    # always(): needs lists every build family, but a single-family dispatch
+    # marks the other six as skipped. A job with a skipped dependency is not
+    # run unless the condition uses always() - !cancelled() is not enough,
+    # which is why this job never ran. A cancelled run still cancels it.
+    if: ${{ always() && (github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && vars.ENABLE_SCHEDULED_BUILDS == 'true')) }}
     needs:
     - resolve-sources
     - build-android12-5-10
