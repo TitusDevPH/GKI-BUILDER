@@ -22,6 +22,9 @@
 
 </div>
 
+> [!NOTE]
+> **Luna Kernels is a fork.** It is forked from [WildKernels/GKI_KernelSU_SUSFS](https://github.com/WildKernels/GKI_KernelSU_SUSFS) and rebranded for this project. All credit for the upstream work belongs to the original authors and the projects listed under [Special Thanks](#special-thanks).
+
 > [!CAUTION]
 > Luna Kernels is not responsible for bricked devices or damage. By flashing, you assume all risk. Back up your data and understand the risks before flashing.
 
@@ -29,7 +32,7 @@
 
 ## About
 
-Generic kernels built on [Google's GKI sources](https://android.googlesource.com/kernel/common/) with KernelSU and SUSFS for root hiding and detection evasion — broad compatibility, not guaranteed for every device.
+A fork of [WildKernels/GKI_KernelSU_SUSFS](https://github.com/WildKernels/GKI_KernelSU_SUSFS). Luna builds generic kernels on [Google's GKI sources](https://android.googlesource.com/kernel/common/) with KernelSU and SUSFS for root hiding and detection evasion — broad compatibility, not guaranteed for every device.
 
 ---
 
