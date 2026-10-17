@@ -1,12 +1,12 @@
 # Post-Install — Verify & Finish Setup
 
-After flashing a Wild Kernels GKI kernel, do these checks in order.
+After flashing a Luna Kernels GKI kernel, do these checks in order.
 
 ## 1. Download matching manager — KernelSU / KernelSU-Next / ReSukiSU
 
 - [ ] Download the `manager-apk-*` from the same [Releases](https://github.com/WildKernels/GKI_KernelSU_SUSFS/releases) page you got the kernel from.
 - [ ] Install / update it over any existing manager.
-- [ ] Open the manager — it should show the kernel version you just flashed (e.g. `6.1.x-androidXX-Wild`) and report "Working".
+- [ ] Open the manager — it should show the kernel version you just flashed (e.g. `6.1.x-androidXX-luna`) and report "Working".
 
 ## 2. SUSFS
 

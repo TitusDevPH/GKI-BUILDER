@@ -16,7 +16,7 @@ variant + inline keyboard JSON always ride along as the fallback.
   adapted from nullptr-t-oss/Dragonw1nd-Kernels (.github/telegram/).
   Every card carries a footer credit to them.
 
-Routing (topic IDs in the Wild Kernels Testing forum, editable in place):
+Routing (topic IDs in the Luna Kernels Testing forum, editable in place):
   build-android12-5-10 -> 3   (5.10.x-android12)
   build-android13-5-10 -> 5   (5.10.x-android13)
   build-android13-5-15 -> 7   (5.15.x-android13; shares the 5.15 topic)
@@ -507,7 +507,7 @@ def main() -> int:
         # markdown positions (list items, standalone lines) - never inside
         # table cells; table cells carry plain text only. No credit footer
         # in the message (attribution lives in this header).
-        rich_parts = [f"# {icon} Wild Kernels"]
+        rich_parts = [f"# {icon} Luna Kernels"]
         if test_note_md:
             # Prominent (user request 2026-10-15): heading-size banner
             # right under the title, BEFORE the table - not a small line
@@ -567,7 +567,7 @@ def main() -> int:
             # kernel count, then Kernel list, a separator rule, and the
             # Root (manager) list - no side-by-side "·" runs that wrap.
             return (
-                f"<b>{icon} Wild Kernels</b>\n"
+                f"<b>{icon} Luna Kernels</b>\n"
                 f"\n"
                 f"<b>{esc(fname)}</b>\n"
                 f"\n"

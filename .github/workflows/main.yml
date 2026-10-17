@@ -876,7 +876,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -907,7 +907,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -938,7 +938,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -969,7 +969,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -1000,7 +1000,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -1031,7 +1031,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -1062,7 +1062,7 @@ jobs:
       ksu_branch: ${{ needs.resolve-sources.outputs.kernelsu_commit }}
       anykernel3_commit: ${{ needs.resolve-sources.outputs.anykernel3_commit }}
       droidspaces_commit: ${{ needs.resolve-sources.outputs.droidspaces_commit }}
-      brand_name: ${{ inputs.brand_name || 'Wild' }}
+      brand_name: ${{ inputs.brand_name || 'luna' }}
       keep_kmi: ${{ inputs.keep_kmi || false }}
       os_patch_level: ${{ inputs.os_patch_level || 'All' }}
       allow_version_mismatch: ${{ inputs.allow_version_mismatch || false }}
@@ -1071,7 +1071,7 @@ jobs:
     secrets: inherit
 
   telegram-announce:
-    # Per-family mini-release digests posted into the Wild Kernels Testing
+    # Per-family mini-release digests posted into the Luna Kernels Testing
     # forum topics (one topic per kernel branch). Skipped families (gated
     # off by a single-family dispatch) are dropped; ran families post even
     # when some jobs failed - the counts carry the bad news. Non-fatal by
@@ -1362,7 +1362,7 @@ jobs:
             if [ -n "${TG_API:-}" ]; then
               # Rich combined card (same dialect as the family cards).
               RICH_ALL="<tg-button-row><tg-button type=\"url\" style=\"success\" url=\"${NIGHTLY_URL}\">📦 All artifacts</tg-button></tg-button-row>"
-              RICH_MSG=$(printf '# 👋 New Release\n\n**Wild Kernels** — %s\n\nRun: [#%s](%s)\n\n%s\n\n%s' \
+              RICH_MSG=$(printf '# 👋 New Release\n\n**Luna Kernels** — %s\n\nRun: [#%s](%s)\n\n%s\n\n%s' \
                 "${{ github.ref_name }}" "${RUN_ID}" "${RUN_URL}" \
                 "${RICH_BTN_ROWS}" "${RICH_ALL}")
               TBODY=$(jq -nc --arg chat "$TG_TEST_CHAT" --arg topic "$TG_TEST_TOPIC" --arg md "$RICH_MSG" \
@@ -1379,7 +1379,7 @@ jobs:
             fi
             if [ -z "$TRESP" ]; then
               COMBINED=$(printf '%s' \
-                "👋 <b>Hello, new release here:</b><br>🔨 <b>Wild Kernels</b> — <code>${{ github.ref_name }}</code><br><b>Run</b>: <a href=\"${RUN_URL}\">#${RUN_ID}</a><br><ul>${FAMILY_LINKS}</ul>")
+                "👋 <b>Hello, new release here:</b><br>🔨 <b>Luna Kernels</b> — <code>${{ github.ref_name }}</code><br><b>Run</b>: <a href=\"${RUN_URL}\">#${RUN_ID}</a><br><ul>${FAMILY_LINKS}</ul>")
               MK=( )
               if [ -n "$TEST_BTN_ROWS" ]; then
                 TEST_BUTTONS=$(jq -nc --argjson rows "[${TEST_BTN_ROWS%,}]" \
