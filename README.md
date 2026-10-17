@@ -1,4 +1,5 @@
 <div align="center">
+          <code>
           _.-"""""-._
         .'  .::::.-"'         _     _   _ _   _    _    
        /   .::'  .'           | |   | | | | \ | |  / \   
@@ -11,7 +12,7 @@
         `.     `-._`-.__     | ' / |  _|  | |_) ||  \| ||  _|  | |    \___ \ 
           `-._        `-.    | . \ | |___ |  _ < | |\  || |___ | |___  ___) |
              `--.____.-'     |_|\_\|_____||_| \_\|_| \_||_____||_____||____/
-
+</code>
 # Luna Kernels for Android devices running GKI 2.0 (5.10+)
 
 [![License: GPL-3.0](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
